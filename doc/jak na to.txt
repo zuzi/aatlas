@@ -1,0 +1,36 @@
+Generate project:
+rails new aatlas
+
+start server:
+rails s -p 5000
+
+generate controller: 
+rails g controller Say hello goodby
+
+generate scaffold:
+rails g scaffold Product title:string description:text image_url:string price:decimal
+
+rails g scaffold User name:string email:string password:string
+rails g scaffold Activity title:string abstract:text detail:text category_id:integer note:text
+rails g scaffold Category name:string
+
+User: id, name, email, password, optional: (gravatar)
+Activity: id, name, abstract, detail, note, tags, category, optional: (time, attachments to
+print, type: group/individual
+
+
+delete generated code:
+rails d scaffold Product
+
+zmena datove struktury a naplneni daty:
+rake db:migrate
+rake db:seed
+
+------
+
+rails g controller static_pages index
+rails g migration add_password_confirmation
+(use change instead of up/down)
+rake db:migrate VERSION=20131020171643
+
+
