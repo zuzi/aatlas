@@ -1,4 +1,5 @@
 class ActivitiesController < ApplicationController
+  before_filter :signed_in_user
   # GET /activities
   # GET /activities.json
   def index

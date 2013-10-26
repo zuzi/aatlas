@@ -7,13 +7,6 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 # Users
-User.delete_all
-User.create(
-	name: 'Tlsk',
-    email: "tulming@tulming.com",
-    password: "tulming:*",
-    password_confirmation: "tulming:*"
-)
 
 # Categories
 Category.delete_all

@@ -1,13 +1,13 @@
-Generate project:
+--Generate project:
 rails new aatlas
 
-start server:
+--start server:
 rails s -p 5000
 
-generate controller: 
+--generate controller: 
 rails g controller Say hello goodby
 
-generate scaffold:
+--generate scaffold:
 rails g scaffold Product title:string description:text image_url:string price:decimal
 
 rails g scaffold User name:string email:string password:string
@@ -19,7 +19,7 @@ Activity: id, name, abstract, detail, note, tags, category, optional: (time, att
 print, type: group/individual
 
 
-delete generated code:
+--delete generated code:
 rails d scaffold Product
 
 zmena datove struktury a naplneni daty:
@@ -32,5 +32,3 @@ rails g controller static_pages index
 rails g migration add_password_confirmation
 (use change instead of up/down)
 rake db:migrate VERSION=20131020171643
-
-
