@@ -83,6 +83,11 @@ input {
   @extend .error;
 }
 
+.jumbotron {
+  margin: 80px 0;
+  text-align: center;
+}
+
 .ibody {
    background: #f1e8d2 url('background.jpg') no-repeat top center;
 }
