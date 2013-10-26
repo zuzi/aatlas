@@ -6,15 +6,15 @@
   <div class="container">
     <h1>Find Agile Activity</h1>
     <p class="lead">Store and Search Activities, Games, and Excercises</p>
-    <p class="">Agile Activity Alas will find what you need for your training</p>
+    <p class="lead-small">Enjoy Agile Activity Alas and find all you need for your training fast</p>
+    <br />
     <% if session[:user_id] %>
-      <%= link_to "Activities", activities_path, class: "btn btn-success btn-large" %>
+      <%= link_to "Browse Activities", activities_path, class: "btn btn-primary btn-large" %>
     <% else %>
-      <%= link_to "Sign In", login_path, class: "btn btn-success btn-large" %>
+      <%= link_to "Sign In", login_path, class: "btn btn-primary btn-large" %>
     <% end %>
   </div>
 </div>
-<hr />
 
 <div class="container">
   <ul class="thumbnails">
