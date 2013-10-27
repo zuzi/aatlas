@@ -1,26 +1,26 @@
-<h1>Listing users</h1>
+<h1>List of users</h1>
 <% if notice %>
 <p id="notice"><%= notice %></p>
 <% end %>
 
-<table>
-  <tr>
-    <th>Name</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
 <% @users.each do |user| %>
-  <tr>
-    <td><%= user.name %></td>
-    <td><%= link_to 'Show', user %></td>
-    <td><%= link_to 'Edit', edit_user_path(user) %></td>
-    <td><%= link_to 'Destroy', user, confirm: 'Are you sure?', method: :delete %></td>
-  </tr>
+  <div class="row">
+    <div class="span1">
+      <div class="btn-group">
+        <%= link_to '<i class="icon-pencil"></i>'.html_safe, edit_user_path(user), class: "btn btn-mini", :title => 'Edit user'  %>
+        <%= link_to '<i class="icon-trash"></i>'.html_safe, user, confirm: 'Are you sure?', method: :delete, class: "btn btn-mini", :title => 'Delete user' %>
+      </div>
+    </div>
+    <%= link_to(user) do %>
+      <div class="span6">
+        <strong><%= user.name %></strong>  
+      </div>
+    <% end %>
+  </div>
 <% end %>
-</table>
 
 <br />
 
 <%= link_to 'New User', new_user_path %>
+
+
