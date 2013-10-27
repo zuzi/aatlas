@@ -1,0 +1,17 @@
+<div class="login_form">
+	<%= form_tag do %>
+		<fieldset>
+			<div>
+				<%= label_tag :name, 'Name:' %>
+				<%= text_field_tag :name, params[:name] %>
+			</div>
+			<div>
+				<%= label_tag :password, 'Password:' %>
+				<%= password_field_tag :password, params[:password] %>
+			</div>
+			<div>
+				<br /><%= submit_tag "Login", :class =>"btn btn-primary btn-success" %>
+			</div>
+		</fieldset>
+	<% end %>
+</div>
