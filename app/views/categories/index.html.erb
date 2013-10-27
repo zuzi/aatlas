@@ -11,11 +11,11 @@
         <%= link_to '<i class="icon-trash"></i>'.html_safe, category, confirm: 'Are you sure?', method: :delete, class: "btn btn-mini", :title => 'Delete user' %>
       </div>
     </div>
-    <%= link_to(category) do %>
       <div class="span6">
-        <strong><%= category.name %></strong>  
+        <%= link_to(category) do %>
+          <strong><%= category.name %></strong>  
+        <% end %>
       </div>
-    <% end %>
   </div>
 <% end %>
 
