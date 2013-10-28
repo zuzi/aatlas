@@ -7,6 +7,15 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 # Users
+User.delete_all
+User.create(
+  name: "tlsk",
+  password: "tulming:*"
+)
+User.create(
+  name: "lmsk",
+  password: "tulming"
+)
 
 # Categories
 Category.delete_all
@@ -36,5 +45,3 @@ Activity.create(
   	category_id: 1,
   	note: "about 1 hour, material: straws, plastic cap, tap"
 )
-
-
