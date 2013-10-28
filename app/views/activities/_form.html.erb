@@ -17,11 +17,11 @@
   </div>
   <div class="field">
     <%= f.label :abstract %><br />
-    <%= f.text_area :abstract %>
+    <%= f.text_area :abstract, :rows => 5 %>
   </div>
   <div class="field">
     <%= f.label :detail %><br />
-    <%= f.text_area :detail %>
+    <%= f.text_area :detail, :rows => 5 %>
   </div>
   <div class="field">
     <%= f.label :category_id %><br />
@@ -32,6 +32,7 @@
     <%= f.text_area :note %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit :class => 'btn btn-info'  %>
+    <%= link_to 'Back', activities_path, :class => 'btn' %>
   </div>
 <% end %>
