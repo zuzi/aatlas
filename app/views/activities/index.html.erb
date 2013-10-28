@@ -1,27 +1,33 @@
 <h1>List of activities</h1>
+<% if notice %>
+<p id="notice"><%= notice %></p>
+<% end %>
 
 <table>
   <tr>
+    <th></th>
     <th>Title</th>
-    <th>Abstract</th>
-    <th>Detail</th>
+    <!-- <th>Abstract</th> -->
+    <!-- <th>Detail</th> -->
     <th>Category</th>
-    <th>Note</th>
-    <th></th>
-    <th></th>
-    <th></th>
+    <!-- <th>Note</th> -->
+
   </tr>
 
 <% @activities.each do |activity| %>
   <tr>
+    <td>
+        <div class="btn-group">
+            <%= link_to '<i class="icon-search"></i>'.html_safe, activity, class: "btn btn-mini", :title => 'Show activity'   %>
+            <%= link_to '<i class="icon-pencil"></i>'.html_safe, edit_activity_path(activity), class: "btn btn-mini", :title => 'Edit activity'  %>
+            <%= link_to '<i class="icon-trash"></i>'.html_safe, activity, confirm: 'Are you sure?', method: :delete, class: "btn btn-mini", :title => 'Delete activity' %>
+        </div>
+    </td>
     <td><%= activity.title %></td>
-    <td><%= activity.abstract %></td>
-    <td><%= activity.detail %></td>
+    <!-- <td><%= activity.abstract %></td> -->
+    <!-- <td><%= activity.detail %></td> -->
     <td><%= activity.category_id %></td>
-    <td><%= activity.note %></td>
-    <td><%= link_to 'Show', activity %></td>
-    <td><%= link_to 'Edit', edit_activity_path(activity) %></td>
-    <td><%= link_to 'Destroy', activity, confirm: 'Are you sure?', method: :delete %></td>
+    <!-- <td><%= activity.note %></td> -->
   </tr>
 <% end %>
 </table>
