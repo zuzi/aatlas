@@ -45,3 +45,23 @@ Activity.create(
   	category_id: 1,
   	note: "about 1 hour, material: straws, plastic cap, tap"
 )
+Activity.create(
+  title: 'test1',
+    abstract: 'have fun', 
+    detail: 'how to play...',
+    category_id: 1,
+    note: "paper"
+)
+Activity.create(
+  title: 'test2',
+    abstract: 'build a high tower, 5 iterations, retro, demo', 
+    detail: 'how to play...',
+    category_id: 3,
+)
+Activity.create(
+  title: 'test3',
+    abstract: 'testing, abstract', 
+    detail: 'how to play...',
+    category_id: 2,
+    note: "n/a"
+)

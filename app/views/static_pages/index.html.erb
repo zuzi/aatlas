@@ -21,25 +21,16 @@
   </div>
 </div>
 
+<% @activities = Activity.order('RANDOM()').limit(3) %>
 <div class="container">
   <ul class="thumbnails">
+  <% @activities.each do |activity| %>
     <li class="span4">
       <div class="thumbnail">
-        <h3>Add random Activity</h3>
-        <p>Thumbnail caption...</p>
+        <h2 class="caption"><%= activity.title %></h2>
+        <p class="detail"><%= activity.abstract %></p>
       </div>
     </li>
-    <li class="span4">
-      <div class="thumbnail">
-        <h3>Add random Game</h3>
-        <p>Thumbnail caption...</p>
-      </div>
-    </li>
-    <li class="span4">
-      <div class="thumbnail">
-        <h3>Add random Game</h3>
-        <p>Thumbnail caption...</p>
-      </div>
-    </li>
+<% end %>
   </ul>
 </div>

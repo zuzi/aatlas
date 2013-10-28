@@ -74,3 +74,20 @@ label {
 a:visited.btn-info, a:visited.btn-primary, a:visited.btn-success {
   color: white;
 }
+
+.thumbnails .caption {
+  font-size: 1.2em;
+  overflow :hidden; 
+  text-overflow:ellipsis; 
+  white-space:nowrap; 
+}
+
+.thumbnails .detail {
+  overflow :hidden; 
+  text-overflow:ellipsis; 
+  display: -webkit-box;
+   -webkit-line-clamp: 5; /* number of lines to show */
+   -webkit-box-orient: vertical;
+}
+
+.thumbnails img{ height:111px; width:74px}
