@@ -14,7 +14,10 @@ Aatlas::Application.routes.draw do
 
   resources :users
 
-  get "static_pages/index"
+  controller :static_pages do
+    get 'index' => :index
+    post 'index' => :login
+  end
 
   resources :categories
 
