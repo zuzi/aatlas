@@ -38,3 +38,21 @@ rails g migration add_password_confirmation
 rake db:migrate VERSION=20131020171643
 
 sqlite3 -line db/development.sqlite3 "select * from users"
+
+------
+botstrap 3.0
+change app stype extension
+change gemfile
+style
+++ cleanup custom css
+
+-----
+
+https://github.com/thomas-mcdonald/bootstrap-sass
+
+other usefull gems:
+http://devise.plataformatec.com.br/#getting-started
+https://github.com/ryanb/cancan
+https://github.com/EppO/rolify
+https://github.com/laserlemon/figaro
+https://github.com/plataformatec/simple_form

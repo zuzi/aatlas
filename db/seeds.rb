@@ -47,10 +47,10 @@ Activity.create(
 )
 Activity.create(
   title: 'test1',
-    abstract: 'have fun', 
+    abstract: 'have fun have fun have fun have fun have fun have fun have fun have fun have fun have fun have fun have fun have fun have fun have fun have fun have fun have fun have fun have fun have fun have fun have fun have fun have fun have fun have fun have fun have fun have fun have fun have fun have fun have fun have fun ', 
     detail: 'how to play...',
     category_id: 1,
-    note: "paper"
+    note: "paper paper paper paper paper paper paper paper paper paper paper paper paper paper paper paper paper paper paper paper paper paper paper paper paper paper paper paper paper paper paper paper paper paper paper paper paper paper paper paper paper paper paper paper paper paper paper paper paper paper paper paper paper paper paper paper paper paper paper paper paper paper paper paper paper "
 )
 Activity.create(
   title: 'test2',

@@ -88,6 +88,7 @@ a:visited.btn-info, a:visited.btn-primary, a:visited.btn-success {
   display: -webkit-box;
    -webkit-line-clamp: 5; /* number of lines to show */
    -webkit-box-orient: vertical;
+  min-height: 90px;
 }
 
 .thumbnails img{ height:111px; width:74px}
