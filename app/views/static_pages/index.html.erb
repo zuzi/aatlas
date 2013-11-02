@@ -18,15 +18,15 @@
 </div>
 
 <% @activities = Activity.order('RANDOM()').limit(3) %>
-<div class="container">
+<div class="row">
   <ul class="thumbnails">
   <% @activities.each do |activity| %>
-    <li class="span4">
+    <li class="col-4 col-lg-4 col-md-4 col-sm-4">
       <div class="thumbnail">
         <h2 class="caption"><%= activity.title %></h2>
         <p class="detail"><%= activity.abstract %></p>
       </div>
     </li>
-<% end %>
+  <% end %>
   </ul>
 </div>
