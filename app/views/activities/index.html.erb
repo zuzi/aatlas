@@ -14,10 +14,10 @@
 <% @activities.each do |activity| %>
   <tr>
     <td>
-        <div class="btn-group">
-            <%= link_to '<i class="icon-search"></i>'.html_safe, activity, class: "btn btn-mini", :title => 'Show activity'   %>
-            <%= link_to '<i class="icon-pencil"></i>'.html_safe, edit_activity_path(activity), class: "btn btn-mini", :title => 'Edit activity'  %>
-            <%= link_to '<i class="icon-trash"></i>'.html_safe, activity, confirm: 'Are you sure?', method: :delete, class: "btn btn-mini", :title => 'Delete activity' %>
+        <div class="btn-group btn-group-xs">
+            <%= link_to '<span class="glyphicon glyphicon-search"></span>'.html_safe, activity, class: "btn btn-default", :title => 'Show activity'   %>
+            <%= link_to '<span class="glyphicon glyphicon-pencil"></span>'.html_safe, edit_activity_path(activity), class: "btn btn-default", :title => 'Edit activity'  %>
+            <%= link_to '<span class="glyphicon glyphicon-trash"></span>'.html_safe, activity, confirm: 'Are you sure?', method: :delete, class: "btn btn-default", :title => 'Delete activity' %>
         </div>
     </td>
     <td><%= activity.title %></td>
