@@ -2,13 +2,13 @@
 
 <% @categories.each do |category| %>
   <div class="row">
-    <div class="span1">
-      <div class="btn-group">
-        <%= link_to '<i class="icon-pencil"></i>'.html_safe, edit_category_path(category), class: "btn btn-mini", :title => 'Edit category'  %>
-        <%= link_to '<i class="icon-trash"></i>'.html_safe, category, confirm: 'Are you sure?', method: :delete, class: "btn btn-mini", :title => 'Delete category' %>
+    <div class="col-md-1">
+      <div class="btn-group btn-group-xs">
+        <%= link_to '<span class="glyphicon glyphicon-pencil"></span>'.html_safe, edit_category_path(category), class: "btn btn-default", :title => 'Edit category'  %>
+        <%= link_to '<span class="glyphicon glyphicon-trash"></span>'.html_safe, category, confirm: 'Are you sure?', method: :delete, class: "btn btn-default", :title => 'Delete category' %>
       </div>
     </div>
-      <div class="span6">
+      <div class="col-md-6">
         <%= link_to(category) do %>
           <strong><%= category.name %></strong>  
         <% end %>
@@ -18,6 +18,6 @@
 
 <br />
 
-<%= link_to 'Create new category', new_category_path, :class => "btn" %>
+<%= link_to 'Create new category', new_category_path, class: "btn btn-info" %>
 
 
