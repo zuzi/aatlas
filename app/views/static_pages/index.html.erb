@@ -1,21 +1,20 @@
 <div class="jumbotron">
   <div class="container">
-    <div class="span7">
+    <div class="col-7">
       <h1>Find Agile Activity</h1>
       <p class="lead">Store and Search Activities, Games, and Excercises</p>
       <p class="lead-small">Enjoy Agile Activity Atlas and find all you need for your training fast</p>
     </div>
-      <div class="span3 space-left">
+      <div class="col-3 space-left">
         <% if signed_in? %>
-          <p class="lead"><%= link_to '<i class="icon-th-list icon-white"></i> Browse Activities'.html_safe, activities_path, class: "btn btn-primary btn-info btn-large" %></p>
-          <p class="lead"><%= link_to '<i class="icon-plus icon-white"></i> Add New Activity'.html_safe, new_activity_path, class: "btn btn-success btn-large" %></p>
+          <p class="lead"><%= link_to '<span class="glyphicon glyphicon-list"></span> Browse Activities'.html_safe, activities_path, class: "btn btn-info btn-large" %></p>
+          <p class="lead"><%= link_to '<span class="glyphicon glyphicon-plus"></span> Add New Activity'.html_safe, new_activity_path, class: "btn btn-success btn-large" %></p>
         <% else %>
             <legend>Please Log In</legend>
             <%= render 'sessions/login' %>
         <% end %>
       </div>
-  </div>
-</div>
+  </div><div>
 
 <% @activities = Activity.order('RANDOM()').limit(3) %>
 <div class="container">
