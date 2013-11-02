@@ -2,13 +2,13 @@
 
 <% @users.each do |user| %>
   <div class="row">
-    <div class="col-xs-1">
+    <div class="col-1 col-md-1 col-sm-2 col-xs-3">
       <div class="btn-group btn-group-xs">
         <%= link_to '<span class="glyphicon glyphicon-pencil"></span>'.html_safe, edit_user_path(user), class: "btn btn-default", :title => 'Edit user'  %>
         <%= link_to '<span class="glyphicon glyphicon-trash"></span>'.html_safe, user, confirm: 'Are you sure?', method: :delete, class: "btn btn-default", :title => 'Delete user' %>
       </div>
     </div>
-    <div class="col-xs-1">
+    <div class="col-11 col-md-11 col-sm-2 col-xs-9">
       <%= link_to(user) do %>
         <strong><%= user.name %></strong>  
       <% end %>
