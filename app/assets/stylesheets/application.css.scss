@@ -13,3 +13,44 @@
 */
 
 @import "bootstrap";
+
+.alert-notice {
+	background-color: #fcf8e3;
+	border-color: #fbeed5;
+	color: #c09853;
+}
+
+.jumbotron {
+  padding: 50px;
+  margin-bottom: 30px;
+  line-height: 20px;
+  border: 1px solid #ddd;
+  background: #fff url('background.jpg') no-repeat top center;
+}
+
+a:visited.btn-info, a:visited.btn-primary, a:visited.btn-success {
+  color: white;
+}
+
+.btn {
+	width: inherit;
+}
+
+label {
+  display: inline;
+}
+
+.jumbotron form {
+  font-size: 0.7em;
+}
+
+.jumbotron {
+	input, textarea, select, .uneditable-input {
+	  padding: 0px 5px;
+	  margin-bottom: 10px;
+	}
+	.btn {
+		padding: 6px 14px;
+	}
+}
+
