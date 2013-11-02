@@ -79,8 +79,12 @@ a:visited.btn-info, a:visited.btn-primary, a:visited.btn-success {
   font-size: 1.2em;
   overflow :hidden; 
   text-overflow:ellipsis; 
-  white-space:nowrap; 
+  white-space:nowrap;
+  padding: 0px;
+  margin: 0px;
 }
+
+
 
 .thumbnails .detail {
   overflow :hidden; 
