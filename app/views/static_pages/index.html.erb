@@ -18,7 +18,6 @@
 </div>
 
 <% @activities = Activity.order('RANDOM()').limit(3) %>
-<div class="row">
   <ul class="thumbnails">
   <% @activities.each do |activity| %>
     <li class="col-4 col-lg-4 col-md-4 col-sm-4">
@@ -29,4 +28,3 @@
     </li>
   <% end %>
   </ul>
-</div>

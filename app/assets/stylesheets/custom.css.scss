@@ -44,22 +44,4 @@ input, textarea, select, .uneditable-input {
   font-style:italic;  
 }
 
-.thumbnails .caption {
-  font-size: 1.2em;
-  overflow :hidden; 
-  text-overflow:ellipsis; 
-  white-space:nowrap;
-  padding: 0px;
-  margin: 0px;
-}
 
-.thumbnails .detail {
-  overflow :hidden; 
-  text-overflow:ellipsis; 
-  display: -webkit-box;
-   -webkit-line-clamp: 5; /* number of lines to show */
-   -webkit-box-orient: vertical;
-  min-height: 90px;
-}
-
-.thumbnails img{ height:111px; width:74px}
