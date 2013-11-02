@@ -2,7 +2,7 @@
   <div class="row">
     <div class="col-9 col-lg-9 col-md-9 cl-sm-3">
       <h1>Find Agile Activity</h1>
-      <p class="lead">Store and Search Activities, Games, and Excercises</p>
+      <h2 class="lead">Store and Search Activities, Games, and Excercises</h2>
       <p class="lead-small">Enjoy Agile Activity Atlas and find all you need for your training fast</p>
     </div>
     <div class="col-3 col-lg-3 col-md-3 col-sm-3">
@@ -18,13 +18,17 @@
 </div>
 
 <% @activities = Activity.order('RANDOM()').limit(3) %>
-  <ul class="thumbnails">
+<div class="row thumbnails">
   <% @activities.each do |activity| %>
-    <li class="col-4 col-lg-4 col-md-4 col-sm-4">
-      <div class="thumbnail">
-        <h2 class="caption"><%= activity.title %></h2>
-        <p class="detail"><%= activity.abstract %></p>
+    <div class="col-4 col-lg-4 col-md-4 col-sm-4">
+      <div class="panel panel-default">
+        <div class="panel panel-heading">
+          <h3 class="panel-title"><%= activity.title %></h3>
+        </div>
+        <div class="panel-body">
+          <%= activity.abstract %>
+        </div>
       </div>
-    </li>
+    </div>
   <% end %>
-  </ul>
+</div>
