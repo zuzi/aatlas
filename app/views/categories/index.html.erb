@@ -2,13 +2,13 @@
 
 <% @categories.each do |category| %>
   <div class="row">
-    <div class="col-md-1">
+    <div class="col-1 col-md-1 col-sm-2 col-xs-3">
       <div class="btn-group btn-group-xs">
         <%= link_to '<span class="glyphicon glyphicon-pencil"></span>'.html_safe, edit_category_path(category), class: "btn btn-default", :title => 'Edit category'  %>
         <%= link_to '<span class="glyphicon glyphicon-trash"></span>'.html_safe, category, confirm: 'Are you sure?', method: :delete, class: "btn btn-default", :title => 'Delete category' %>
       </div>
     </div>
-      <div class="col-md-6">
+      <div class="col-11 col-md-11 col-sm-2 col-xs-9">
         <%= link_to(category) do %>
           <strong><%= category.name %></strong>  
         <% end %>
