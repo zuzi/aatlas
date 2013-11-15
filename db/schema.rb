@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131026142615) do
+ActiveRecord::Schema.define(:version => 20131103210644) do
 
   create_table "activities", :force => true do |t|
     t.string   "title"
@@ -19,8 +19,9 @@ ActiveRecord::Schema.define(:version => 20131026142615) do
     t.text     "detail"
     t.integer  "category_id"
     t.text     "note"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.datetime "created_at",                :null => false
+    t.datetime "updated_at",                :null => false
+    t.string   "short_title", :limit => 30
   end
 
   create_table "categories", :force => true do |t|

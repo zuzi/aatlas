@@ -3,6 +3,7 @@
 <table>
   <tr>
     <th></th>
+    <th>Short title</th>
     <th>Title</th>
     <!-- <th>Abstract</th> -->
     <!-- <th>Detail</th> -->
@@ -20,6 +21,7 @@
             <%= link_to '<span class="glyphicon glyphicon-trash"></span>'.html_safe, activity, confirm: 'Are you sure?', method: :delete, class: "btn btn-default", :title => 'Delete activity' %>
         </div>
     </td>
+    <td><%= activity.short_title %></td>
     <td><%= activity.title %></td>
     <!-- <td><%= activity.abstract %></td> -->
     <!-- <td><%= activity.detail %></td> -->

@@ -12,6 +12,10 @@
   <% end %>
 
   <div class="field">
+    <%= f.label :short_title %><br />
+    <%= f.text_field :short_title, :maxlength =>30  %>
+  </div>
+  <div class="field">
     <%= f.label :title %><br />
     <%= f.text_field :title %>
   </div>

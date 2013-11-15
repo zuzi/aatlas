@@ -26,40 +26,48 @@ Category.create(
 	name: "Excercise",
 )
 Category.create(
-	name: "Activity",
+  name: "Activity",
+)
+Category.create(
+  name: "Rails",
 )
 
 # Activities
 Activity.delete_all
 Activity.create(
-	title: 'Building a tower from Marshmallow and Spagetti',
+    short_title: 'Marshmallow & Spaghetti Tower',
+    title: 'Building a tower from Marshmallow and Spaghetti',
   	abstract: 'build a high tower, 5 iterations, retro, demo', 
   	detail: 'how to play...',
   	category_id: 1,
   	note: "about 1 hour, material: marshmallow, spagetti"
 )
 Activity.create(
-	title: 'Building a tower from Straws',
+    short_title: 'Tower from Straws',
+    title: 'Building a tower from Straws',
   	abstract: 'build a high tower, 5 iterations, retro, demo', 
   	detail: 'how to play...',
   	category_id: 1,
   	note: "about 1 hour, material: straws, plastic cap, tap"
 )
 Activity.create(
-  title: 'test1',
+    short_title: 'test1',
+    title: 'test1',
     abstract: 'have fun have fun have fun have fun have fun have fun have fun have fun have fun have fun have fun have fun have fun have fun have fun have fun have fun have fun have fun have fun have fun have fun have fun have fun have fun have fun have fun have fun have fun have fun have fun have fun have fun have fun have fun ', 
     detail: 'how to play...',
     category_id: 1,
     note: "paper paper paper paper paper paper paper paper paper paper paper paper paper paper paper paper paper paper paper paper paper paper paper paper paper paper paper paper paper paper paper paper paper paper paper paper paper paper paper paper paper paper paper paper paper paper paper paper paper paper paper paper paper paper paper paper paper paper paper paper paper paper paper paper paper "
 )
 Activity.create(
-  title: 'test2',
+    short_title: 'test2',
+    title: 'test2',
     abstract: 'build a high tower, 5 iterations, retro, demo', 
     detail: 'how to play...',
     category_id: 3,
 )
 Activity.create(
-  title: 'test3',
+    short_title: 'test3',
+    title: 'test3',
     abstract: 'testing, abstract', 
     detail: 'how to play...',
     category_id: 2,

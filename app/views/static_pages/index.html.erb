@@ -23,7 +23,13 @@
     <div class="col-4 col-lg-4 col-md-4 col-sm-4">
       <div class="panel panel-default">
         <div class="panel panel-heading">
-          <h3 class="panel-title"><%= activity.title %></h3>
+          <h3 class="panel-title">
+            <% if activity.short_title %>
+              <%= activity.short_title %> 
+             <% else %> 
+              <%= activity.title %> 
+             <% end %>
+          </h3>
         </div>
         <div class="panel-body">
           <%= activity.abstract %>
