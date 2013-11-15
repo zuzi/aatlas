@@ -15,6 +15,9 @@
 class Activity < ActiveRecord::Base
   validates :title, presence: true
   validate :category_exists
+  
+  attr_accessible :short_title, :title, :abstract, :detail, :category_id, :note, :tag_list
+  acts_as_taggable
 
   belongs_to :category
 

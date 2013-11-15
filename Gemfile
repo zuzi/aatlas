@@ -4,6 +4,7 @@ ruby "1.9.3"
 
 gem 'rails', '3.2.1'
 gem 'bootstrap-sass', '~> 3.0.0.0.rc'
+gem 'acts-as-taggable-on'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'

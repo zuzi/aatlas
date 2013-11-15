@@ -27,6 +27,8 @@ Aatlas::Application.routes.draw do
 
   root :to => 'static_pages#index'
   
+  get 'tags/:tag', to: 'activities#index', as: :tag
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

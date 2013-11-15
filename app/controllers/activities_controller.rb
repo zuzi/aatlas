@@ -4,7 +4,11 @@ class ActivitiesController < ApplicationController
   # GET /activities
   # GET /activities.json
   def index
-    @activities = Activity.all
+    if params[:tag]
+      @activities = Activity.tagged_with(params[:tag])
+    else
+      @activities = Activity.all
+    end
 
     respond_to do |format|
       format.html # index.html.erb
