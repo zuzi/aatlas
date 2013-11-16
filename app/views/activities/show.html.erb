@@ -17,7 +17,7 @@
 
 <p>
   <b>Detail:</b>
-  <%= @activity.detail %>
+  <%= @activity.detail.gsub(/(?:\n\r?|\r\n?)/, '<br />').html_safe %>
 </p>
 
 <p>
@@ -27,7 +27,7 @@
 
 <p>
   <b>Note:</b>
-  <%= @activity.note %>
+  <%= @activity.note.gsub(/(?:\n\r?|\r\n?)/, '<br />').html_safe %>
 </p>
 <br />
 
