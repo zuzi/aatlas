@@ -12,7 +12,7 @@
 
 <p>
   <b>Abstract:</b>
-  <%= @activity.abstract.gsub(/(?:\n\r?|\r\n?)/, '<br />') %>
+  <%= @activity.abstract.gsub(/(?:\n\r?|\r\n?)/, '<br />').html_safe %>
 </p>
 
 <p>
