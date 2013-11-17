@@ -21,7 +21,7 @@
 
 <div class="alert alert-warning">
   <b>Abstract:</b><br />
-  <%= @activity.abstract.gsub(/(?:\n\r?|\r\n?)/, '<br />').html_safe %>
+  <%= html_text @activity.abstract %>
 </div>
 
 <div class="panel panel-default">
@@ -29,11 +29,11 @@
     <b>Detail</b>
   </div>
   <div class="panel panel-body">
-    <%= @activity.detail.gsub(/(?:\n\r?|\r\n?)/, '<br />').html_safe %>
+    <%= html_text @activity.detail %>
   </div>
   <div class="panel-footer">
     <b>Note:</b><br />
-    <%= @activity.note.gsub(/(?:\n\r?|\r\n?)/, '<br />').html_safe %>
+    <%= html_text @activity.note %>
   </div>
 </div>
 
