@@ -7,6 +7,10 @@ class ActivitiesController < ApplicationController
     if params[:tag]
       @activities_grid = initialize_grid(
           Activity.tagged_with(params[:tag]),
+          :include => [:category],
+          :custom_order => {
+            'activities.category_id' => 'activities.category.name'
+          },
           per_page: 10,
           name: 'activities',
           enable_export_to_csv: true,
