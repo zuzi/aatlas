@@ -48,15 +48,11 @@ heroku run rake db:migrate
 
 heroku run rails console
 
+------
+
+Bundle exec annotate
 
 ------
-botstrap 3.0
-change app stype extension
-change gemfile
-style
-++ cleanup custom css
-
------
 
 https://github.com/thomas-mcdonald/bootstrap-sass
 
