@@ -1,18 +1,23 @@
 <h1>List of activities</h1>
-<div id="tag_cloud">
-  <% tag_cloud Activity.tag_counts, %w[s m l] do |tag, css_class| %>
-    <%= link_to tag.name, tag_path(tag.name), class: css_class %>
-  <% end %>
+<div class="panel panel-default">
+  <div class="panel panel-body">
+    <div id="tag_cloud">
+      <% tag_cloud Activity.tag_counts, %w[s m l] do |tag, css_class| %>
+        <%= link_to tag.name, tag_path(tag.name), class: css_class %>
+      <% end %>
+    </div>
+  </div>
 </div>
-
+<br />
 <table>
   <tr>
     <th></th>
     <th>Short title</th>
-    <th>Title</th>
+    <!-- <th>Title</th> -->
     <!-- <th>Abstract</th> -->
     <!-- <th>Detail</th> -->
     <th>Category</th>
+    <th>Tags</th>
     <!-- <th>Note</th> -->
 
   </tr>
@@ -31,7 +36,7 @@
     <!-- <td><%= activity.abstract %></td> -->
     <!-- <td><%= activity.detail %></td> -->
     <td><%= activity.category.name %></td>
-    <td>Tags: <%= raw activity.tag_list.map { |t| link_to t, tag_path(t) }.join(', ') %></td>
+    <td><%= raw activity.tag_list.map { |t| link_to t, tag_path(t) }.join(', ') %></td>
     <!-- <td><%= activity.note %></td> -->
   </tr>
 <% end %>

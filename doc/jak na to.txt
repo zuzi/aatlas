@@ -39,6 +39,16 @@ rake db:migrate VERSION=20131020171643
 
 sqlite3 -line db/development.sqlite3 "select * from users"
 
+-------
+HEROKU
+git push heroku master
+
+heroku run rake db:reset
+heroku run rake db:migrate
+
+heroku run rails console
+
+
 ------
 botstrap 3.0
 change app stype extension
