@@ -9,39 +9,8 @@
   </div>
 </div>
 <br />
-<table>
-  <tr>
-    <th></th>
-    <th>Short title</th>
-    <!-- <th>Title</th> -->
-    <!-- <th>Abstract</th> -->
-    <!-- <th>Detail</th> -->
-    <th>Category</th>
-    <th>Tags</th>
-    <!-- <th>Note</th> -->
 
-  </tr>
-
-<% @activities.each do |activity| %>
-  <tr>
-    <td>
-        <div class="btn-group btn-group-xs">
-            <%= link_to '<span class="glyphicon glyphicon-search"></span>'.html_safe, activity, class: "btn btn-default", :title => 'Show activity'   %>
-            <%= link_to '<span class="glyphicon glyphicon-pencil"></span>'.html_safe, edit_activity_path(activity), class: "btn btn-default", :title => 'Edit activity'  %>
-            <%= link_to '<span class="glyphicon glyphicon-trash"></span>'.html_safe, activity, confirm: 'Are you sure?', method: :delete, class: "btn btn-default", :title => 'Delete activity' %>
-        </div>
-    </td>
-    <td><%= activity.short_title %></td>
-    <!-- <td><%= activity.title %></td> -->
-    <!-- <td><%= activity.abstract %></td> -->
-    <!-- <td><%= activity.detail %></td> -->
-    <td><%= activity.category.name %></td>
-    <td><%= raw activity.tag_list.map { |t| link_to t, tag_path(t) }.join(', ') %></td>
-    <!-- <td><%= activity.note %></td> -->
-  </tr>
-<% end %>
-</table>
-
+<%= render 'activities_grid' %>
 <br />
 
 <%= link_to 'Create new activity', new_activity_path, class: 'btn btn-info' %>

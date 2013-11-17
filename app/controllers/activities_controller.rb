@@ -5,15 +5,25 @@ class ActivitiesController < ApplicationController
   # GET /activities.json
   def index
     if params[:tag]
-      @activities = Activity.tagged_with(params[:tag])
+      @activities_grid = initialize_grid(
+          Activity.tagged_with(params[:tag]),
+          per_page: 10,
+          name: 'activities',
+          enable_export_to_csv: true,
+          csv_file_name: "activities"
+      )
     else
-      @activities = Activity.all
+      @activities_grid = initialize_grid(
+          Activity,
+          per_page: 10,
+          name: 'activities',
+          enable_export_to_csv: true,
+          csv_file_name: "activities"
+      )
     end
 
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @activities }
-    end
+    export_grid_if_requested
+
   end
 
   # GET /activities/1
