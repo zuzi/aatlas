@@ -1,3 +1,7 @@
+git clone https://github.com/zuzi/aatlas.git
+bundle install
+rake db:reset
+
 --Generate project:
 rails new aatlas
 
