@@ -1,14 +1,6 @@
 <%= grid(@activities_grid) do |g|
   g.column :name => 'Short Title', :attribute => 'short_title'
   g.column :name => 'Title', :attribute => 'title'
-  
-# nezna to_dropdown /????
-  # g.column :name => 'Category', :attribute => 'category_id', :custom_filter => Category.to_dropdown,  :auto_reload => true  do |activity|
-  #   activity.category.name if activity.category
-  # end
-
-  g.column :name => 'Category', :attribute => 'category_id', custom_filter: :auto 
-
   g.column name: 'Category', model: 'Category', attribute: 'name', custom_filter: :auto do |activity|
     activity.category.name if activity.category
   end

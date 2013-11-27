@@ -9,7 +9,7 @@ class ActivitiesController < ApplicationController
           Activity.tagged_with(params[:tag]),
           :include => [:category],
           :custom_order => {
-            'activities.category_id' => 'activities.category'
+            'activities.category_id' => 'activities.category.name'
           },
           per_page: 10,
           name: 'activities',
@@ -21,7 +21,6 @@ class ActivitiesController < ApplicationController
           Activity,
           :include => [:category],
           :custom_order => {
-            # 'activities.category_id' => 'activities.category'
             'activities.category_id' => 'activities.category.name'
           },
           per_page: 10,
