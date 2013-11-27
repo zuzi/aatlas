@@ -9,7 +9,7 @@
 
   g.column :name => 'Category', :attribute => 'category_id', custom_filter: :auto 
 
-  g.column :name => 'Category', :attribute => 'category_id', :custom_filter => [:category, :to_option] do |activity|
+  g.column name: 'Category', model: 'Category', attribute: 'name', custom_filter: :auto do |activity|
     activity.category.name if activity.category
   end
 
