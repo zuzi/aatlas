@@ -1,0 +1,29 @@
+<%= grid(@activities_grid) do |g|
+  g.column :name => 'Short Title', :attribute => 'short_title'
+  g.column :name => 'Title', :attribute => 'title'
+  
+# nezna to_dropdown /????
+  # g.column :name => 'Category', :attribute => 'category_id', :custom_filter => Category.to_dropdown,  :auto_reload => true  do |activity|
+  #   activity.category.name if activity.category
+  # end
+
+  g.column :name => 'Category', :attribute => 'category_id', custom_filter: :auto 
+
+  g.column :name => 'Category', :attribute => 'category_id', :custom_filter => [:category, :to_option] do |activity|
+    activity.category.name if activity.category
+  end
+
+  g.column :name => 'Abstract', :attribute => 'abstract'
+  g.column :name => 'Detail', :attribute => 'detail'
+  g.column :name => 'Note', :attribute => 'note'
+  g.column   :in_csv => false do |activity|
+    link_to '<span class="glyphicon glyphicon-search"></span>'.html_safe, activity, class: "btn btn-default", :title => 'Show activity'
+  end
+  g.column   :in_csv => false do |activity|
+    link_to '<span class="glyphicon glyphicon-pencil"></span>'.html_safe, edit_activity_path(activity), class: "btn btn-default", :title => 'Edit activity'
+  end
+  g.column   :in_csv => false do |activity|
+    link_to '<span class="glyphicon glyphicon-trash"></span>'.html_safe, activity, confirm: 'Are you sure?', method: :delete, class: "btn btn-default", :title => 'Delete activity'
+  end
+
+end -%>

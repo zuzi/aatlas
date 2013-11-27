@@ -1,3 +1,7 @@
+git clone https://github.com/zuzi/aatlas.git
+bundle install
+rake db:reset
+
 --Generate project:
 rails new aatlas
 
@@ -39,14 +43,20 @@ rake db:migrate VERSION=20131020171643
 
 sqlite3 -line db/development.sqlite3 "select * from users"
 
-------
-botstrap 3.0
-change app stype extension
-change gemfile
-style
-++ cleanup custom css
+-------
+HEROKU
+git push heroku master
 
------
+heroku run rake db:reset
+heroku run rake db:migrate
+
+heroku run rails console
+
+------
+
+Bundle exec annotate
+
+------
 
 https://github.com/thomas-mcdonald/bootstrap-sass
 

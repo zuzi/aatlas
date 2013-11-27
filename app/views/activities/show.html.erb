@@ -1,37 +1,42 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <b>Short title:</b>
+<h1>
   <%= @activity.short_title %>
-</p>
+</h1>
 
-<p>
-  <b>Title:</b>
+<h2>
   <%= @activity.title %>
-</p>
-
-<p>
-  <b>Abstract:</b>
-  <%= @activity.abstract.gsub(/(?:\n\r?|\r\n?)/, '<br />').html_safe %>
-</p>
-
-<p>
-  <b>Detail:</b>
-  <%= @activity.detail.gsub(/(?:\n\r?|\r\n?)/, '<br />').html_safe %>
-</p>
-
-<p>
-  <b>Category:</b>
-  <%= @activity.category.name %>
-</p>
-
-<p>
-  <b>Note:</b>
-  <%= @activity.note.gsub(/(?:\n\r?|\r\n?)/, '<br />').html_safe %>
-</p>
+</h2>
 <br />
+<div class="panel panel-info">
+  <div class="panel-heading">
+    <b>Category:</b>
+    <%= @activity.category.name %>
+  </div>
+  <div class="panel panel-body">
+    <b>Tags:</b> 
+    <%= raw @activity.tag_list.map { |t| link_to t, tag_path(t) }.join(', ') %>
+  </div>
+</div>
 
-<p><b>Tags:</b> <%= raw @activity.tag_list.map { |t| link_to t, tag_path(t) }.join(', ') %></p>
+<div class="alert alert-warning">
+  <b>Abstract:</b><br />
+  <%= html_text @activity.abstract %>
+</div>
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <b>Detail</b>
+  </div>
+  <div class="panel panel-body">
+    <%= html_text @activity.detail %>
+  </div>
+  <div class="panel-footer">
+    <b>Note:</b><br />
+    <%= html_text @activity.note %>
+  </div>
+</div>
+
 
 <br />
 
