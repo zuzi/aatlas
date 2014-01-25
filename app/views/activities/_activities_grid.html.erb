@@ -5,9 +5,18 @@
     activity.category.name if activity.category
   end
 
-  g.column :name => 'Abstract', :attribute => 'abstract'
-  g.column :name => 'Detail', :attribute => 'detail'
-  g.column :name => 'Note', :attribute => 'note'
+  g.column :name => 'Abstract', :attribute => 'abstract' do |activity|
+    activity.abstract.truncate(150, separator: " ")
+  end
+  g.column :name => 'Detail', :attribute => 'detail' do |activity|
+    activity.detail.truncate(150, separator: " ")
+  end
+  g.column :name => 'Note', :attribute => 'note' do |activity|
+    if activity.note 
+      activity.note.truncate(150, separator: " ")
+    end
+  end
+
   g.column   :in_csv => false do |activity|
     link_to '<span class="glyphicon glyphicon-search"></span>'.html_safe, activity, class: "btn btn-default btn-xs", :title => 'Show activity'
   end
