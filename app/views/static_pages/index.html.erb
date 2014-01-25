@@ -22,9 +22,10 @@
   <% @activities.each do |activity| %>
     <div class="col-4 col-lg-4 col-md-4 col-sm-4">
       <div class="panel panel-default">
+        <%= link_to '<span class="glyphicon glyphicon-search"></span>'.html_safe, activity, class: "right-btn btn btn-default btn-xs", :title => 'Show activity' %> 
         <div class="panel panel-heading">
           <h3 class="panel-title">
-            <%= activity.short_title %> 
+            <%= activity.short_title %>
           </h3>
         </div>
         <div class="panel-body">
