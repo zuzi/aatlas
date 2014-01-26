@@ -41,6 +41,7 @@
   </div>
   <div class="actions">
     <%= f.submit :class => 'btn btn-info'  %>
-    <%= link_to 'Back', activities_path, :class => 'btn' %>
+    <%= link_to '<span class="glyphicon glyphicon-list"></span> List of activities'.html_safe, activities_path, class: "btn btn-default" %>
+    <%= link_to '<span class="glyphicon glyphicon-search"></span> Show activity'.html_safe, @activity, :class => 'btn btn-default' %>
   </div>
 <% end %>
