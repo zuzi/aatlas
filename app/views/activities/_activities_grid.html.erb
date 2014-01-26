@@ -6,14 +6,18 @@
   end
 
   g.column :name => 'Abstract', :attribute => 'abstract' do |activity|
-    activity.abstract.truncate(150, separator: " ")
+    if activity.abstract 
+      html_text activity.abstract.truncate(150, separator: " ")
+    end
   end
   g.column :name => 'Detail', :attribute => 'detail' do |activity|
-    activity.detail.truncate(150, separator: " ")
+    if activity.detail 
+      html_text activity.detail.truncate(150, separator: " ")
+    end
   end
   g.column :name => 'Note', :attribute => 'note' do |activity|
     if activity.note 
-      activity.note.truncate(150, separator: " ")
+      html_text activity.note.truncate(150, separator: " ")
     end
   end
 
