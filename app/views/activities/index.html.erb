@@ -1,6 +1,17 @@
 <h1>List of activities
-<span class="right-button"><%= link_to '<span class="glyphicon glyphicon-plus"></span> Create new activity'.html_safe, new_activity_path, :class => 'btn btn-info' %></span>
+<span class="right-button">
+	<%= link_to '<span class="glyphicon glyphicon-plus"></span> Create new activity'.html_safe, new_activity_path, :class => 'btn btn-info' %>
+</span>
 </h1>
+
+
+<div class="search-area">
+	<%= form_tag activities_path, :method => 'get', :id => "activities_search" do %>
+	   	<%= submit_tag "Search", :name => nil, :class => "btn btn-default search-button" %>
+	    <%= text_field_tag :search, params[:search], :class => "form-control search-input" %>
+	<% end %>
+</div>
+
 <% if Activity.tag_counts.length > 0 %>
 	<div class="panel panel-default">
 	  <div class="panel panel-body">

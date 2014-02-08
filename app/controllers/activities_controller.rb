@@ -18,7 +18,7 @@ class ActivitiesController < ApplicationController
       )
     else
       @activities_grid = initialize_grid(
-          Activity,
+          Activity.search(params[:search]),
           :include => [:category],
           :custom_order => {
             'activities.category_id' => 'activities.category.name'

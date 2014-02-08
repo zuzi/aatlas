@@ -15,3 +15,10 @@
 //= require bootstrap
 //= require wice_grid
 //= require_tree .
+
+$(function() {
+  $("#activities_search input").keyup(function() {
+    $.get($("#activities_search").attr("action"), $("#activities_search").serialize(), null, "script");
+    return false;
+  });
+});

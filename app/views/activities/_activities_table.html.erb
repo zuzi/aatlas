@@ -1,0 +1,19 @@
+<table class="table">
+  <% @activities_list.each do |item| %>
+    <tr>
+      <td>
+      	Title: 
+      </td>
+      <td>
+      	<%= item.title %>
+      </td>
+      <td>
+      	Detail: 
+      </td>
+      <td>
+      	<%= item.short_title %>
+      </td>
+
+    </tr>
+  <% end %>
+</table>

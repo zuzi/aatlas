@@ -22,6 +22,14 @@ class Activity < ActiveRecord::Base
 
   belongs_to :category
 
+  def self.search(search)
+    if search
+      where('short_title LIKE ? OR title LIKE ? OR abstract LIKE ? OR detail LIKE ? OR note LIKE ?', "%#{search}%", "%#{search}%", "%#{search}%", "%#{search}%", "%#{search}%")
+    else
+      scoped
+    end
+  end
+
   private
   def category_exists
     errors.add(:base, "Category must exist") unless Category.find_by_id(self.category_id)
