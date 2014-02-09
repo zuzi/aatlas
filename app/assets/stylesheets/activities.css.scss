@@ -21,14 +21,10 @@
 .search-area {
 	width: 200px;
 	float: right;
+	margin-top: -33px;
 }
 
-.search-input {
-	width: 120px;
-	margin-right: 20px;
-}
-
-.search-button {
-	width: 70px;
-	height: 34px;
+.small-label {
+	font-size: 0.35em;
+	font-weight: bold;
 }
