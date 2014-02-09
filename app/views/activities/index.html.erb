@@ -32,7 +32,10 @@
 <% end %>
 <br />
 
-<%= render 'activities_grid' %>
+<div id="activities_grid">
+	<%= render 'activities_grid' %>
+</div>
+
 <br />
 
 <%= link_to '<span class="glyphicon glyphicon-plus"></span> Create new activity'.html_safe, new_activity_path, :class => 'btn btn-info' %>
